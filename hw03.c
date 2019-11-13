@@ -48,8 +48,8 @@ for(int i=2; i < argc; i+=4) 	/*after mode, first element of Student struct is a
 	Student stewie;
 	stewie.first_name = argv[i];
 	stewie.last_name  = argv[i+1];
-	stewie.major 	   = argv[i+2];
-	stewie.year 	   = atoi(argv[i+3]); //change back to int
+	stewie.major 	  = argv[i+2];
+	stewie.year 	  = atoi(argv[i+3]); //change back to int
  	print_student(mode, stewie);
 }
 	

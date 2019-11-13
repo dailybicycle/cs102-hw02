@@ -10,9 +10,9 @@ typedef enum {
 typedef struct {
   char *first_name;
   char *last_name;
-  char *major; //RTC: Added
-  int  year; //RTC: Added; chose int because of comments below. No need for ptr.
-  // TODO: add fields here for major and year : DONE
+  char *major; 	//RTC: Added
+  int  year; 	//RTC: Added; chose int because of comments below. No need for ptr.
+  		// TODO: add fields here for major and year : DONE
 } Student;
 
 void print_student(Mode m, Student s) {
@@ -26,7 +26,7 @@ void print_student(Mode m, Student s) {
     case YEAR_AND_NAME:
     	printf("%d %s %s\n", s.year, s.first_name, s.last_name); //%d is for int of year.
     	break;	
-  // TODO: handle other cases : DONE
+  		// TODO: handle other cases : DONE
   }
 }
 
@@ -38,11 +38,12 @@ You will need to check argc to determine the number of students passed at runtim
 The fields are all strings (char[]), except year is a number (int)
 */
 int main(int argc, char **argv) {
-	int mode = atoi(argv[1]); //grabs first input in argv after program name and makes it an int to use later in print_student.
+	int mode = atoi(argv[1]); 	/*grabs first input in argv after program name and makes it an 
+					int to use later in print_student.*/
 
-for(int i=2; i < argc; i+=4) //after mode, first element of Student struct is at 2. Every 4 inputs is the beginning of new Student.
-							 //initialized right in for expression for neatness. argc is just # of entries in argv[], so that's the max # of entries.
-							 //+= is same as i=i+4, increment by 4.
+for(int i=2; i < argc; i+=4) 	/*after mode, first element of Student struct is at 2. Every 4 inputs is the beginning of new Student.
+				initialized right in for expression for neatness. argc is just # of entries in argv[], so that's the max # of entries.
+				+= is same as i=i+4, increment by 4.*/
 {
 	Student stewie;
 	stewie.first_name = argv[i];
